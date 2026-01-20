@@ -1,0 +1,61 @@
+% ========= interne Einstellungen =========
+\usepackage{titlesec}
+% PART
+\titleformat{\part}[display]
+{\centering\normalfont\huge\bfseries\color{graycolor}}
+{\partname\ \thepart}
+{20pt}
+{\Huge\color{maincolor}}
+
+% CHAPTER
+\titleformat{\chapter}[display]
+{\bfseries\Huge\color{maincolor}}
+{\filleft\Large\color{graycolor}\chaptertitlename\ \thechapter}
+{1ex}
+{\titlerule[2pt]\vspace{1ex}\filleft}
+[\vspace{1ex}\titlerule]
+
+% SECTION
+\titleformat{\section}
+{\Large\bfseries\sffamily\color{maincolor}}
+{\thesection}
+{1em}
+{}
+[{\titlerule[0.8pt]}]
+
+% SUBSECTION
+\titleformat{\subsection}
+{\large\bfseries\sffamily\color{accentcolor}}
+{\thesubsection}
+{1em}
+{}
+
+% SUBSUBSECTION
+\titleformat{\subsubsection}
+{\normalsize\bfseries\sffamily\color{black}}
+{\thesubsubsection}
+{1em}
+{}
+
+\usepackage{titletoc}
+% Kapitel im ToC
+\titlecontents{chapter}[0em]
+{\addvspace{1.5em}\bfseries\color{maincolor}}
+{\contentslabel{2.3em}}
+{}
+{\hfill\contentspage}
+[\addvspace{0.5em}]
+
+% Section im ToC
+\titlecontents{section}[2.3em]
+{\addvspace{0.2em}}
+{\contentslabel{2.3em}}
+{}
+{\titlerule*[0.7pc]{.}\contentspage}
+
+% Subsection im ToC
+\titlecontents{subsection}[5em]
+{}
+{\contentslabel{3em}}
+{}
+{\titlerule*[0.7pc]{.}\contentspage}
